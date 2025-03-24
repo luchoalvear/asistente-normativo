@@ -1,0 +1,48 @@
+import os
+import PyPDF2
+import tiktoken
+from openai import OpenAI
+
+# Configura tu API Key de OpenAI
+os.environ["OPENAI_API_KEY"] = "TU_API_KEY_AQUÍ"
+
+# Carga y lee el PDF
+pdf_path = "DTO-47_05-JUN-1992.pdf"
+
+def extraer_texto(pdf_path):
+    texto = ""
+    with open(pdf_path, "rb") as archivo:
+        lector = PyPDF2.PdfReader(archivo)
+        for pagina in lector.pages:
+            texto += pagina.extract_text() + "\n"
+    return texto
+
+# Dividir texto en fragmentos (chunks)
+def dividir_texto(texto, max_tokens=1000):
+    encoder = tiktoken.encoding_for_model("gpt-3.5-turbo")
+    palabras = texto.split("\n")
+    chunks, chunk_actual = [], ""
+
+    for linea in palabras:
+        temp = chunk_actual + "\n" + linea
+        if len(encoder.encode(temp)) < max_tokens:
+            chunk_actual = temp
+        else:
+            chunks.append(chunk_actual.strip())
+            chunk_actual = linea
+    if chunk_actual:
+        chunks.append(chunk_actual.strip())
+    return chunks
+
+# Guardar los chunks como archivos .txt (puede servir para pruebas)
+def guardar_chunks(chunks):
+    os.makedirs("chunks", exist_ok=True)
+    for i, chunk in enumerate(chunks):
+        with open(f"chunks/chunk_{i+1}.txt", "w", encoding="utf-8") as f:
+            f.write(chunk)
+
+if __name__ == "__main__":
+    texto = extraer_texto(pdf_path)
+    chunks = dividir_texto(texto)
+    guardar_chunks(chunks)
+    print(f"✅ Se extrajeron y guardaron {len(chunks)} fragmentos del decreto.")
