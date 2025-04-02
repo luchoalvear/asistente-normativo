@@ -2,3 +2,4 @@ fastapi
 uvicorn
 llama-index
 openai
+python-dotenv
