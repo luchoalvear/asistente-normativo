@@ -1,33 +1,23 @@
-
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel
 from llama_index.core import StorageContext, load_index_from_storage
+from llama_index.llms.openai import OpenAI
 from llama_index.core.query_engine import RetrieverQueryEngine
-from dotenv import load_dotenv
 import os
 
-# Cargar API Key desde .env
-load_dotenv()
+app = FastAPI()
+PERSIST_DIR = "./storage"
 
-# Cargar índice vectorial desde la carpeta 'storage'
-storage_context = StorageContext.from_defaults(persist_dir="./storage")
-index = load_index_from_storage(storage_context)
+if os.path.exists(os.path.join(PERSIST_DIR, "docstore.json")):
+    storage_context = StorageContext.from_defaults(persist_dir=PERSIST_DIR)
+    index = load_index_from_storage(storage_context)
+else:
+    index = None
 
-# Crear motor de consulta
-query_engine = index.as_query_engine()
-
-# Crear app de FastAPI
-app = FastAPI(title="ProyectaGPT")
-
-# Modelo de entrada
-class Pregunta(BaseModel):
-    pregunta: str
-
-# Endpoint para responder preguntas
-@app.post("/preguntar")
-async def responder(p: Pregunta):
-    try:
-        respuesta = query_engine.query(p.pregunta)
-        return {"respuesta": str(respuesta)}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
+@app.get("/preguntar")
+def preguntar(texto: str):
+    if not index:
+        raise HTTPException(status_code=503, detail="El índice aún no ha sido generado.")
+    retriever = index.as_retriever(similarity_top_k=3)
+    engine = RetrieverQueryEngine.from_args(retriever, llm=OpenAI(model="gpt-4"))
+    respuesta = engine.query(texto)
+    return {"respuesta": str(respuesta)}
