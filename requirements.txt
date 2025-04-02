@@ -3,5 +3,5 @@ uvicorn
 llama-index
 openai
 python-dotenv
-llama-index
-llama-index-text-splitter
+
+
