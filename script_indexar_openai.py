@@ -1,19 +1,27 @@
-from llama_index.readers.file.simple_directory_reader import SimpleDirectoryReader
-from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_storage
+from llama_index import SimpleDirectoryReader, GPTVectorStoreIndex, ServiceContext
+from llama_index.llms import OpenAI
+from dotenv import load_dotenv
 import os
+import shutil
 
-persist_dir = "./storage"
+print("Limpiando carpeta storage...")
+if os.path.exists("storage"):
+    shutil.rmtree("storage")
 
-# Si el índice ya existe, se carga desde almacenamiento
-if os.path.exists(persist_dir):
-    print("Cargando índice existente desde almacenamiento...")
-    storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
-    index = load_index_from_storage(storage_context)
-else:
-    print("Generando índice vectorial...")
-    reader = SimpleDirectoryReader(input_dir="./docs", recursive=True)
-    documents = reader.load_data()
-    index = VectorStoreIndex.from_documents(documents, show_progress=True)
-    index.storage_context.persist(persist_dir=persist_dir)
+print("Generando índice vectorial...")
 
-print("Índice listo para ser consultado.")
+load_dotenv()
+
+# Cargar documentos
+documents = SimpleDirectoryReader("docs").load_data()
+
+# Crear contexto de servicio con modelo OpenAI
+llm = OpenAI(temperature=0, model="gpt-3.5-turbo")
+service_context = ServiceContext.from_defaults(llm=llm)
+
+# Construir índice vectorial
+index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
+
+# Persistir índice
+index.storage_context.persist()
+print("✅ Índice vectorial generado y almacenado correctamente.")
