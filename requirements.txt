@@ -2,7 +2,7 @@
 llama-index-legacy==0.9.48
 
 # Cliente OpenAI compatible con LlamaIndex legacy y proxies
-openai==0.27.10
+openai==1.3.9
 
 # Versión segura de numpy, compatible y sin conflictos
 numpy>=1.26,<2.0
