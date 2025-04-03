@@ -1,4 +1,5 @@
-from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader, StorageContext, Document
+from llama_index.core import VectorStoreIndex, StorageContext, Document
+from llama_index.readers.file import SimpleDirectoryReader
 import os
 import shutil
 
@@ -21,7 +22,7 @@ print("Generando índice vectorial...")
 documentos = SimpleDirectoryReader(ruta_docs).load_data()
 
 # Crear índice
-index = GPTVectorStoreIndex.from_documents(documentos)
+index = VectorStoreIndex.from_documents(documentos)
 
 # Guardar índice
 index.storage_context.persist(persist_dir=ruta_storage)
