@@ -1,7 +1,8 @@
 import os
 import shutil
 import json
-from llama_index.core import VectorStoreIndex, SimpleDirectoryReader, StorageContext, Document
+from llama_index import VectorStoreIndex, SimpleDirectoryReader, StorageContext, Document
+
 from llama_index.core.text_splitter import TokenTextSplitter
 from llama_index.embeddings.openai import OpenAIEmbedding
 from llama_index.core.node_parser import SentenceSplitter
