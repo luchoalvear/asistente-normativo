@@ -1,7 +1,7 @@
 import os
 import shutil
 import json
-from llama_index import VectorStoreIndex, SimpleDirectoryReader, StorageContext, Document
+from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader, StorageContext, Document
 
 from llama_index.core.text_splitter import TokenTextSplitter
 from llama_index.embeddings.openai import OpenAIEmbedding
@@ -56,7 +56,7 @@ for doc in raw_docs:
 nodes = pipeline.run(documents=documentos)
 
 # Crear índice
-index = VectorStoreIndex(nodes)
+index = GPTVectorStoreIndex(nodes)
 index.storage_context.persist(persist_dir=PERSIST_DIR)
 
 print("✅ Índice generado con metadatos y guardado correctamente.")
