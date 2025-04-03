@@ -1,27 +1,28 @@
-from llama_index import SimpleDirectoryReader, GPTVectorStoreIndex, ServiceContext
-from llama_index.llms import OpenAI
-from dotenv import load_dotenv
 import os
-import shutil
+from llama_index import VectorStoreIndex, SimpleDirectoryReader
+from llama_index.embeddings.openai import OpenAIEmbedding
+from llama_index.node_parser import SimpleNodeParser
+from llama_index.llms import OpenAI
+from llama_index import Settings
+from dotenv import load_dotenv
 
-print("Limpiando carpeta storage...")
-if os.path.exists("storage"):
-    shutil.rmtree("storage")
-
-print("Generando índice vectorial...")
-
+# Cargar variables de entorno
 load_dotenv()
 
-# Cargar documentos
+# Configurar modelos
+llm = OpenAI(model="gpt-3.5-turbo")
+embed_model = OpenAIEmbedding(model="text-embedding-ada-002")
+node_parser = SimpleNodeParser()
+
+# Aplicar configuración global
+Settings.llm = llm
+Settings.embed_model = embed_model
+Settings.node_parser = node_parser
+
+# Leer documentos y construir índice
 documents = SimpleDirectoryReader("docs").load_data()
+index = VectorStoreIndex.from_documents(documents)
 
-# Crear contexto de servicio con modelo OpenAI
-llm = OpenAI(temperature=0, model="gpt-3.5-turbo")
-service_context = ServiceContext.from_defaults(llm=llm)
-
-# Construir índice vectorial
-index = GPTVectorStoreIndex.from_documents(documents, service_context=service_context)
-
-# Persistir índice
+# Guardar índice
 index.storage_context.persist()
-print("✅ Índice vectorial generado y almacenado correctamente.")
+print("✅ Índice generado y almacenado con éxito.")
