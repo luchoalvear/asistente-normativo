@@ -1,5 +1,5 @@
 # Núcleo de LlamaIndex compatible con proxies
-llama-index-legacy==0.8.63
+llama-index-legacy==0.9.48
 
 # Cliente OpenAI compatible con LlamaIndex legacy y proxies
 openai==0.27.10
