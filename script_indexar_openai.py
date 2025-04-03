@@ -1,4 +1,4 @@
-from llama_index.readers import SimpleDirectoryReader
+from llama_index.readers.file import SimpleDirectoryReader
 from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_storage
 import os
 
