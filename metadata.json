@@ -1,162 +1,110 @@
-{
-  "DECRETO-548.pdf": {
+[
+  {
     "nombre": "DECRETO-548",
-    "tipo": "Específico",
-    "descripcion": "NORMAS PARA INFRAESTRUCTURA DE LOS LOCALES EDUCACIONALES, ESTABLECEN LAS EXIGENCIAS MINIMAS QUE DEBEN CUMPLIR LOS ESTABLECIMIENTOS RECONOCIDOS COMO COOPERADORES DE LA FUNCION EDUCACIONAL DEL ESTADO, SEGUN EL NIVEL Y MODALIDAD DE LA ENSEÑANZA QUE IMPARTAN. ESTE DOCUMENTO ES CONOCIDO COMO EL REGLAMENTO DEL RECONOCIMIENTO OFICIAL."
+    "tipo": "Normativa",
+    "categoria": "Reconocimiento Oficial",
+    "descripcion": "Reglamento que establece los requisitos para el reconocimiento oficial de establecimientos educacionales."
   },
-  "DECRETO-661.pdf": {
-    "nombre": "DECRETO-661",
-    "tipo": "Específico",
-    "descripcion": "REGLAMENTO DE LA LEY N° 19.886 DE COMPRAS PÚBLICAS. ESTABLECE LAS BASES SOBRE CONTRATOS ADMINISTRATIVOS DE SUMINISTRO Y PRESTACIÓN DE SERVICIOS DEL ESTADO DE CHILE. ESTE DOCUMENTO ES CONOCIDO COMO EL REGLAMENTO DE COMPRAS PÚBLICAS."
-  },
-  "DECRETO-47.pdf": {
-    "nombre": "DECRETO-47",
-    "tipo": "Específico",
-    "descripcion": "establece reglamentos de aplicación de la Ley General de Urbanismo y Construcciones y regula el procedimiento administrativo de su aplicación, el proceso de planificación urbana, el proceso de urbanización, el proceso de construcción y los estándares técnicos de diseño y de construcción exigibles."
-  },
-  "DECRETO-977.pdf": {
+  {
     "nombre": "DECRETO-977",
-    "tipo": "Específico",
-    "descripcion": "Reglamenta las condiciones sanitarias a que deberá ceñirse la producción, importación, elaboración, envase, almacenamiento, distribución y venta de alimentos para uso humano, así como las condiciones en que deberá efectuarse la publicidad de los mismos, con el objeto de proteger la salud y nutrición de la población y garantizar el suministro de productos sanos e inocuos."
+    "tipo": "Normativa",
+    "categoria": "Reconocimiento Oficial",
+    "descripcion": "Reglamento sanitario que fija condiciones mínimas para la infraestructura educacional."
   },
-  "enfoque_genero.pdf": {
-    "nombre": "Orientaciones de enfoque de género en los proyectos",
-    "tipo": "Específico",
-    "descripcion": "Da orientaciones para la incorporación del enfoque de género en los procesos de formulación de proyectos de inversión pública que ingresan al Sistema Nacional de Inversiones (SNI) del estado de Chile."
+  {
+    "nombre": "OGUC",
+    "tipo": "Normativa",
+    "categoria": "Reconocimiento Oficial",
+    "descripcion": "Ordenanza General de Urbanismo y Construcciones. Norma estructural y urbanística nacional."
   },
-  "Instructivo_ejecucion_APR_2024.pdf": {
-    "nombre": "Instructivo para Proyectos de Agua Potable Rural (APR), etapa de ejecución",
-    "tipo": "Específico",
-    "descripcion": "Da instrucciones particulares para la postulación, admisibilidad y obtención del resultado del análisis técnico-económico (RATE) de proyectos de Agua Potable Rural (APR)."
+  {
+    "nombre": "enfoque_genero",
+    "tipo": "Guía Técnica",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Guía para la incorporación del enfoque de género en la inversión pública."
   },
-  "Instructivo_Normalizacion_Electr_y_Acc_Univ.pdf": {
-    "nombre": "Instructivo para Proyectos de Normalización Eléctrica y Accesibilidad Universal.",
-    "tipo": "Específico",
-    "descripcion": "Establece orientaciones para la postulación de proyectos de Normalización de instalaciones eléctricas y de accesibilidad universal en infraestructura existente."
+  {
+    "nombre": "instructivo_conservacion",
+    "tipo": "Instructivo",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Instructivo técnico para la conservación de infraestructura pública."
   },
-  "Instructivo_Obras_de_Riego.pdf": {
-    "nombre": "Instructivo para proyectos de inversión de riego.",
-    "tipo": "Específico",
-    "descripcion": "establecer indicaciones para la postulación de proyectos de riego."
+  {
+    "nombre": "Instructivo_Normalizacion_Electr_y_Acc_Univ",
+    "tipo": "Instructivo",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Instructivo para adecuación eléctrica y accesibilidad universal en recintos educativos."
   },
-  "Instructivo_preinv_y_diseno_APR_2024.pdf": {
-    "nombre": "Instructivo para Proyectos de Agua Potable Rural etapa de preinversión y diseño.",
-    "tipo": "Específico",
-    "descripcion": "Establece los alcances y requisitos mínimos para la postulación, a las etapas de prefactibilidad, factibilidad y diseño, de proyectos de Agua Potable Rural (APR)."
+  {
+    "nombre": "Instructivo_proporcionalidad_SNI_2025",
+    "tipo": "Instructivo",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Lineamientos técnicos sobre proporcionalidad en proyectos del Sistema Nacional de Inversiones."
   },
-  "Instructivo_proporcionalidad_SNI_2025.pdf": {
-    "nombre": "Instructivo de proporcionalidad en la postulación de proyectos al Sistema Nacional de Inversiones (SNI).",
-    "tipo": "Específico",
-    "descripcion": "Establece criterior para graduar las exigencias sobre proyectos de inversión pública, en función de la envergadura, costo e impactos del proyecto, tanto en sus fases de construcción, operación y eventual cierre."
+  {
+    "nombre": "Manual_de_escalas_IRD_amenaza_por_Erupciones_volcanicas",
+    "tipo": "Manual Técnico",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Escala oficial para evaluar amenazas por erupciones volcánicas."
   },
-  "LEY-18575.pdf": {
-    "nombre": "LEY ORGANICA CONSTITUCIONAL DE BASES GENERALES DE LA ADMINISTRACION DEL ESTADO.",
-    "tipo": "General",
-    "descripcion": "Establece las bases del ordenamiento, estructura, responsabilidades, atribuciones, etc. de todo ambito asociado a la administración del estado."
+  {
+    "nombre": "Manual_de_escalas_IRD_amenaza_por_Incendios_Forestales",
+    "tipo": "Manual Técnico",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Escala oficial para evaluar amenazas por incendios forestales."
   },
-  "LEY-18695.pdf": {
-    "nombre": "LEY ORGANICA CONSTITUCIONAL DE MUNICIPALIDADES.",
-    "tipo": "General",
-    "descripcion": "Establece las bases del ordenamiento, estructura, responsabilidades, atribuciones, etc. de todo ambito asociado a la administración del las Municipalidades."
+  {
+    "nombre": "Manual_de_escalas_IRD_amenaza_por_Remocion_en_masa",
+    "tipo": "Manual Técnico",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Escala oficial para evaluar amenazas por remociones en masa."
   },
-  "LEY-19864.pdf": {
-    "nombre": "LEY DE LA EDUCACION PARVULARIA Y REGULARIZACIÓN DE INSTALACION DE JARDINES INFANTILES.",
-    "tipo": "Específico",
-    "descripcion": "ESTABLECE PARTICULARIDADES ESPECIFICAS DE EDUCACIÓN PARVULARIA, COMPLEMENTARIAS A LA LEY DE EDUCACIÓN."
+  {
+    "nombre": "Manual_de_escalas_IRD_amenaza_por_Tsunami",
+    "tipo": "Manual Técnico",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Escala oficial para evaluar amenazas por tsunamis."
   },
-  "Ley 18962.pdf": {
-    "nombre": "LEY ORGANICA CONSTITUCIONAL DE ENSEÑANZA.",
-    "tipo": "GENERAL",
-    "descripcion": "fija los requisitos mínimos que deberán cumplir los niveles de enseñanza básica y enseñanza media, y asimismo regula el deber del Estado de velar por su cumplimiento. Del mismo modo norma el proceso de reconocimiento oficial de los establecimientos educacionales de todo nivel."
+  {
+    "nombre": "Metodologia_Complementaria_RRD",
+    "tipo": "Metodología",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Metodología para incluir criterios de reducción de riesgos de desastres."
   },
-  "LEY-19880.pdf": {
-    "nombre": "LEY DE LOS PROCEDIMIENTOS ADMINISTRATIVOS DE LA ADMINISTRACION DEL ESTADO.",
-    "tipo": "GENERAL",
-    "descripcion": "Establece y regula las bases del procedimiento administrativo de los actos de la Administración del Estado."
+  {
+    "nombre": "Metodologia_Educ._Parvularia",
+    "tipo": "Metodología",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Metodología específica para infraestructura de educación parvularia."
   },
-  "LEY-19886.pdf": {
-    "nombre": "LEY DE BASES SOBRE CONTRATOS ADMINISTRATIVOS DE SUMINISTRO Y PRESTACION DE SERVICIOS.",
-    "tipo": "GENERAL",
-    "descripcion": "ESTABLECE EL MARCO JURÍDICO SOBRE CONTRATOS ADMINISTRATIVOS DE SUMINISTRO Y PRESTACIÓN DE SERVICIOS DEL ESTADO DE CHILE. DOCUMENTO CONOCIDO COMO LEY DE COMPRAS PÚBLICAS."
+  {
+    "nombre": "Metodologia_General",
+    "tipo": "Metodología",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Documento base para formular proyectos bajo el sistema nacional de inversiones."
   },
-  "DFL458-LGUC.pdf": {
-    "nombre": "LEY GENERAL DE URBANISMO Y CONSTRUCCIONES.",
-    "tipo": "GENERAL",
-    "descripcion": "contiene los principios, atribuciones, potestades, facultades, responsabilidades, derechos, sanciones y demás normas que rigen a los organismos, funcionarios, profesionales y particulares, en las acciones de planificación urbana, urbanización y construcción."
+  {
+    "nombre": "Metodología_Infra._Educacional",
+    "tipo": "Metodología",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Guía para infraestructura educacional en el contexto de proyectos de inversión pública."
   },
-  "Manual_de_Saneamiento_Sanitario_Rural.pdf": {
-    "nombre": "Manual de PROYECTOS DE Saneamiento Sanitario del Sector Rural.",
-    "tipo": "ESPECÍFICO",
-    "descripcion": "Establece instrucciones para la postulación, admisibilidad y obtención del resultado del análisis técnico-económico (RATE) de proyectos tanto de Agua Potable Rural como de Aguas Servidas del sector Rural presentados por la Subdirección de Servicios de Sanitarios Rurales (SSSR) de la Dirección de Obras Hidráulicas (DOH) del Ministerio de Obras Públicas (MOP)"
+  {
+    "nombre": "Metodologia_simplificada",
+    "tipo": "Metodología",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Versión simplificada de la metodología general para proyectos de menor envergadura."
   },
-  "Mecanismo_reajustabilidad_SNI.pdf": {
-    "nombre": "MECANISMO REAJUSTABILIDAD DE CONTRATOS DE EJECUCIÓN DE OBRA PÚBLICA.",
-    "tipo": "ESPECÍFICO",
-    "descripcion": "ESTABLECE EL MECANISMO EXCEPCIONAL DE REAJUSTABILIDAD DE CONTRATOS DE EJECUCIÓN DE OBRA PÚBLICA EN EL MARCO DEL SISTEMA NACIONAL DE INVERSIONES (SNI)."
+  {
+    "nombre": "NORMAS_INV._PÚBLICA_(NIP)",
+    "tipo": "Normas Técnicas",
+    "categoria": "Formulación de Proyectos",
+    "descripcion": "Compilado de normas técnicas aplicables a proyectos del Sistema Nacional de Inversiones."
   },
-  "Metodologia_simplificada.pdf": {
-    "nombre": "METODOLOGÍA SIMPLIFICADA PARA proyectos con costo total menor a 5.000 UTM.",
-    "tipo": "ESPECÍFICO",
-    "descripcion": "ESTABLECE DIRECTRICES, REQUISITOS, EXCEPCIONALIDADES Y OTROS ASPECTOS ESPECÍFICOS, PARA LA POSTULACIÓN, A ETAPA DE EJECUCIÓN, DE PROYECTOS CUYO COSTO TOTAL ES MENOR A LAS 5.000 UNIDADES TRIBUTARIAS MENSUALES (UTM). DOCUMENTO CONOCIDO COMO METODOLOGÍA SIMPLIFICADA."
-  },
-  "NORMAS_INV._PÚBLICA_(NIP).pdf": {
-    "nombre": "NORMAS, INSTRUCCIONES Y PROCEDIMIENTOS (NIP) PARA EL PROCESO DE INVERSIÓN PÚBLICA.",
-    "tipo": "GENERAL",
-    "descripcion": "ESTABLECE LAS disposiciones que orientan la planificación, ejecución y evaluación de proyectos de inversión pública EN CHILE."
-  },
-  "Oficio_C.G.R_60.820.pdf": {
-    "nombre": "SISTEMA DE CONTABILIDAD GENERAL DE LA NACIÓN.",
-    "tipo": "GENERAL",
-    "descripcion": "Fija las normas generales y principios contables que constituyen la contabilidad pública. También establece la normativa específica que regula las modalidades de registro de determinados hechos económicos de común ocurrencias en la Administración del Estado."
-  },
-  "OGUC.pdf": {
-    "nombre": "ORDENANZA GENERAL DE URBANISMO Y CONSTRUCCIONES.",
-    "tipo": "GENERAL",
-    "descripcion": "Reglamenta la Ley General de Urbanismo y Construcciones, y regula el procedimiento administrativo, el proceso de planificación urbana, el proceso de urbanización, el proceso de construcción, y los estándares técnicos de diseño y de construcción. Documento conocido como OGUC."
-  },
-  "instructivo_conservacion.pdf": {
-    "nombre": "INSTRUCTIVO PARA PROYECTOS DE CONSERVACIÓN DE INFRAESTRUCTURA PÚBLICA.",
-    "tipo": "Específico",
-    "descripcion": "Establece las instrucciones para presentar proyectos de conservación de infraestructura pública en el Sistema Nacional de Inversiones (SNI)."
-  },
-  "Manual_de_escalas_IRD_amenaza_por_Erupciones_volcanicas.pdf": {
-    "nombre": "MANUAL PARA LA ESTIMACIÓN DEL ÍNDICE DE RIESGO DE DESASTRES DE AMENAZA POR ERUPCIONES VOLCÁNICAS.",
-    "tipo": "Específico",
-    "descripcion": "Describe los factores, subfactores y escalas que conforman el Índice de Riesgo de Desastres (IRD) de amenaza por erupciones volcánicas y, que debe ser aplicado a las alternativas de solución de proyectos de infraestructura pública. Complementa la Metodología de Riesgo nde Desastres."
-  },
-  "Manual_de_escalas_IRD_amenaza_por_Incendios_Forestales.pdf": {
-    "nombre": "MANUAL PARA LA ESTIMACIÓN DEL ÍNDICE DE RIESGO DE DESASTRES DE AMENAZA POR INCENDIOS FORESTALES.",
-    "tipo": "Específico",
-    "descripcion": "Describe los factores, subfactores y escalas que conforman el Índice de Riesgo de Desastres (IRD) de amenaza por incendios forestales y, que debe ser aplicado a las alternativas de solución de proyectos de infraestructura pública. Complementa la Metodología de Riesgo nde Desastres."
-  },
-  "Manual_de_escalas_IRD_amenaza_por_Remocion_en_masa.pdf": {
-    "nombre": "MANUAL PARA LA ESTIMACIÓN DEL ÍNDICE DE RIESGO DE DESASTRES DE AMENAZA POR REMOCIÓN EN MASA POR FLUJOS.",
-    "tipo": "Específico",
-    "descripcion": "Describe los factores, subfactores y escalas que conforman el Índice de Riesgo de Desastres (IRD) de amenaza por remoción en masa por flujos y, que debe ser aplicado a las alternativas de solución de proyectos de infraestructura pública. Complementa la Metodología de Riesgo nde Desastres."
-  },
-  "Manual_de_escalas_IRD_amenaza_por_Tsunami.pdf": {
-    "nombre": "MANUAL PARA LA ESTIMACIÓN DEL ÍNDICE DE RIESGO DE DESASTRES DE AMENAZA POR TSUNAMI.",
-    "tipo": "Específico",
-    "descripcion": "Describe los factores, subfactores y escalas que conforman el Índice de Riesgo de Desastres (IRD) de amenaza por tsunami y, que debe ser aplicado a las alternativas de solución de proyectos de infraestructura pública. Complementa la Metodología de Riesgo nde Desastres."
-  },
-  "Metodologia_Complementaria_RRD.pdf": {
-    "nombre": "METODOLOGÍA DE RIESGO DE DESASTRES EN PROYECTOS DE INFRAESTRUCTURA PÚBLICA.",
-    "tipo": "Específico",
-    "descripcion": "Entregar orientaciones a quienes formulan, evalúan y toman decisiones en torno a las posibilidades de proyectar y ejecutar proyectos de infraestructura en territorios expuestos a amenazas."
-  },
-  "Metodologia_Educ._Parvularia.pdf": {
-    "nombre": "METODOLOGÍA PARA LA FORMULACIÓN Y EVALUACIÓN SOCIAL DE PROYECTOS DE EDUCACIÓN PARVULARIA.",
-    "tipo": "Específico",
-    "descripcion": "Orienta la formulación y evaluación de proyectos de infraestructura de Educación Prebásica (Parvularia o Inicial)."
-  },
-  "Metodologia_General.pdf": {
-    "nombre": "METODOLOGÍA GENERAL DE PREPARACIÓN Y EVALUACIÓN DE PROYECTOS.",
-    "tipo": "Específico",
-    "descripcion": "Es una guía para la preparación y evaluación social de proyectos que no cuentan actualmente con una metodología específica."
-  },
-  "Metodología_Infra._Educacional.pdf": {
-    "nombre": "METODOLOGÍA PARA LA FORMULACIÓN Y EVALUACIÓN DE PROYECTOS DE INFRAESTRUCTURA EDUCACIONAL.",
-    "tipo": "Específico",
-    "descripcion": "Da una pauta y el enfoque que debe emplearse para preparar y analizar proyectos (iniciativas) de inversión pública en educación básica y media científico-humanista con enfoque en la infraestructura."
+  {
+    "nombre": "DECRETO-661",
+    "tipo": "Normativa",
+    "categoria": "Licitaciones",
+    "descripcion": "Normativa que regula los procesos de licitación pública en infraestructura educacional."
   }
-}
+]
