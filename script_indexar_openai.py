@@ -1,29 +1,19 @@
-from llama_index.core import VectorStoreIndex, StorageContext, Document
-from llama_index.readers.file.base import SimpleDirectoryReader
-
+from llama_index.readers import SimpleDirectoryReader
+from llama_index.core import VectorStoreIndex, StorageContext, load_index_from_storage
 import os
-import shutil
 
-# Ruta base
-ruta_base = os.path.dirname(os.path.abspath(__file__))
+persist_dir = "./storage"
 
-# Carpeta de documentos
-ruta_docs = os.path.join(ruta_base, "docs")
+# Si el índice ya existe, se carga desde almacenamiento
+if os.path.exists(persist_dir):
+    print("Cargando índice existente desde almacenamiento...")
+    storage_context = StorageContext.from_defaults(persist_dir=persist_dir)
+    index = load_index_from_storage(storage_context)
+else:
+    print("Generando índice vectorial...")
+    reader = SimpleDirectoryReader(input_dir="./docs", recursive=True)
+    documents = reader.load_data()
+    index = VectorStoreIndex.from_documents(documents, show_progress=True)
+    index.storage_context.persist(persist_dir=persist_dir)
 
-# Carpeta de almacenamiento
-ruta_storage = os.path.join(ruta_base, "storage")
-
-# Eliminar carpeta storage si existe
-print("Limpiando carpeta storage...")
-if os.path.exists(ruta_storage):
-    shutil.rmtree(ruta_storage)
-
-# Leer documentos
-print("Generando índice vectorial...")
-documentos = SimpleDirectoryReader(ruta_docs).load_data()
-
-# Crear índice
-index = VectorStoreIndex.from_documents(documentos)
-
-# Guardar índice
-index.storage_context.persist(persist_dir=ruta_storage)
+print("Índice listo para ser consultado.")
