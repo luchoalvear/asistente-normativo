@@ -1,5 +1,6 @@
 from llama_index.core import VectorStoreIndex, StorageContext, Document
-from llama_index.readers.file import SimpleDirectoryReader
+from llama_index.readers.file.base import SimpleDirectoryReader
+
 import os
 import shutil
 
