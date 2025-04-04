@@ -1,7 +1,5 @@
 from fastapi import FastAPI, HTTPException
 from llama_index import StorageContext, load_index_from_storage
-from llama_index.llms.openai import OpenAI
-from llama_index import RetrieverQueryEngine
 import os
 
 app = FastAPI()
@@ -17,9 +15,7 @@ else:
 def preguntar(texto: str):
     if not index:
         raise HTTPException(status_code=503, detail="El índice aún no ha sido generado.")
-    retriever = index.as_retriever(similarity_top_k=3)
-    engine = RetrieverQueryEngine.from_args(retriever, llm=OpenAI(model="gpt-4"))
-    respuesta = engine.query(texto)
+    respuesta = index.query(texto)
     return {"respuesta": str(respuesta)}
 
 if __name__ == "__main__":
