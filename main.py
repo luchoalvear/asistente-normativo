@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from llama_index import StorageContext, load_index_from_storage
 from llama_index.llms.openai import OpenAI
-from llama_index.core.query_engine import RetrieverQueryEngine
+from llama_index import RetrieverQueryEngine
 import os
 
 app = FastAPI()
